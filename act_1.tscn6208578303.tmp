@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://cmmxvu0aoasf3"]
+
+[ext_resource type="Script" uid="uid://d172se32mdaco" path="res://act_1.gd" id="1_7aoxw"]
+[ext_resource type="Texture2D" uid="uid://dfage6hnxhhy3" path="res://sprites/doordivider.png" id="2_b6rvi"]
+[ext_resource type="AudioStream" uid="uid://cfn5b8j7u7p3c" path="res://sfx/officertalksfx.mp3" id="3_b6rvi"]
+[ext_resource type="AudioStream" uid="uid://d0r6u7seqasmq" path="res://sfx/womantalkingsfx.mp3" id="4_hi3qe"]
+[ext_resource type="AudioStream" uid="uid://5oitkb1sq57d" path="res://sfx/neighborhoodambience.mp3" id="5_65gwn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hi3qe"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7aoxw"]
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6rvi"]
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65gwn"]
+bg_color = Color(1, 1, 1, 0)
+
+[node name="Act1" type="Control" unique_id=1636467962]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7aoxw")
+
+[node name="bg" type="Panel" parent="." unique_id=525565745]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hi3qe")
+
+[node name="door" type="TextureRect" parent="." unique_id=64780122]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 764.0
+offset_top = 265.0
+offset_right = 844.0
+offset_bottom = 565.0
+texture = ExtResource("2_b6rvi")
+
+[node name="textleft" type="RichTextLabel" parent="." unique_id=734739060]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 95.0
+offset_top = -156.0
+offset_right = -904.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+visible_characters = 0
+
+[node name="textright" type="RichTextLabel" parent="." unique_id=1512508482]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 910.0
+offset_top = -156.0
+offset_right = -89.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.5618361, 0.38673264, 0.8538764, 1)
+visible_characters = 0
+
+[node name="clickdetector" type="Button" parent="." unique_id=1296980222]
+unique_name_in_owner = true
+z_index = 10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_7aoxw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b6rvi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_65gwn")
+metadata/_edit_lock_ = true
+
+[node name="dialoguenoisetimer" type="Timer" parent="." unique_id=176776877]
+unique_name_in_owner = true
+wait_time = 0.05
+one_shot = true
+
+[node name="officertalksfx" type="AudioStreamPlayer2D" parent="." unique_id=469303334]
+unique_name_in_owner = true
+position = Vector2(14, 395)
+stream = ExtResource("3_b6rvi")
+volume_db = -4.0
+max_distance = 1193.0
+panning_strength = 0.6
+
+[node name="womantalksfx" type="AudioStreamPlayer2D" parent="." unique_id=604636658]
+unique_name_in_owner = true
+position = Vector2(14, 395)
+stream = ExtResource("4_hi3qe")
+volume_db = -4.0
+max_distance = 1193.0
+panning_strength = 0.6
+
+[node name="ambiencesfx" type="AudioStreamPlayer" parent="." unique_id=476974193]
+unique_name_in_owner = true
+stream = ExtResource("5_65gwn")
+volume_db = -80.0
+autoplay = true
+parameters/looping = true
