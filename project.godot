@@ -13,12 +13,17 @@ config_version=5
 config/name="areasonwhy"
 run/main_scene="uid://cmmxvu0aoasf3"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/image="uid://csnsx8xvd10d8"
 config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=1600
 window/size/viewport_height=900
+window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=3
+mouse_cursor/custom_image="uid://cmpxujsawt20d"
 
 [editor_plugins]
 
