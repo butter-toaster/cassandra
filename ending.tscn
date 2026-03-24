@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bgc5e2uv8475b"]
+
+[ext_resource type="Script" uid="uid://btfx5axgj4ndd" path="res://ending.gd" id="1_k7rdy"]
+[ext_resource type="Texture2D" uid="uid://bmrvc5cmxlyeb" path="res://sprites/photograph1.png" id="2_sy8ce"]
+[ext_resource type="Texture2D" uid="uid://cwldax87fdaa6" path="res://sprites/photograph2.png" id="3_uvbhr"]
+[ext_resource type="Texture2D" uid="uid://csnsx8xvd10d8" path="res://sprites/toaststudios.png" id="4_m7rhh"]
+[ext_resource type="FontFile" uid="uid://cy7cym5wx2cnc" path="res://JMH Typewriter.otf" id="5_e2dv3"]
+[ext_resource type="AudioStream" uid="uid://dk652vypulv53" path="res://sfx/endingambience.mp3" id="6_sy8ce"]
+
+[node name="ending" type="Control" unique_id=1312689636]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k7rdy")
+
+[node name="photo1" type="TextureRect" parent="." unique_id=782361904]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 63.0
+offset_top = 16.0
+offset_right = 3063.0
+offset_bottom = 3016.0
+rotation = -0.07073699
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_sy8ce")
+
+[node name="photo2" type="TextureRect" parent="." unique_id=574795134]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 206.0
+offset_top = -53.0
+offset_right = 3206.0
+offset_bottom = 2947.0
+rotation = 0.0556231
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_uvbhr")
+
+[node name="toaststudios" type="TextureRect" parent="." unique_id=422347890]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 945.0
+offset_top = 302.0
+offset_right = 2385.0
+offset_bottom = 1422.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_m7rhh")
+
+[node name="cassandra" type="Label" parent="." unique_id=913261020]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1070.0
+offset_top = 336.00003
+offset_right = 1403.0
+offset_bottom = 435.00003
+theme_override_fonts/font = ExtResource("5_e2dv3")
+theme_override_font_sizes/font_size = 52
+text = "cassandra."
+
+[node name="credit" type="Label" parent="." unique_id=1730464162]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1070.0
+offset_top = 406.00003
+offset_right = 1419.0
+offset_bottom = 505.00003
+theme_override_fonts/font = ExtResource("5_e2dv3")
+theme_override_font_sizes/font_size = 29
+text = "a short story game by "
+
+[node name="ambience" type="AudioStreamPlayer" parent="." unique_id=810949601]
+unique_name_in_owner = true
+stream = ExtResource("6_sy8ce")
+volume_db = -5.474
+pitch_scale = 0.2
+parameters/looping = true

@@ -16,7 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://dc78sgrg03g4i" path="res://sfx/cockingsfx.mp3" id="7_ir5wi"]
 [ext_resource type="AudioStream" uid="uid://0oueifo62k1w" path="res://sfx/dooropenandslamsfx.mp3" id="9_baaq4"]
 [ext_resource type="AudioStream" uid="uid://bh4k5y8beq5ne" path="res://sfx/bargingsfx.mp3" id="10_jxrpg"]
-[ext_resource type="AudioStream" uid="uid://wk07j3ys0whi" path="res://sfx/entitysfx.mp3" id="11_qgxdu"]
+[ext_resource type="AudioStream" uid="uid://6w51b01rwkqt" path="res://sfx/ringing.mp3" id="14_icfjp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hi3qe"]
 bg_color = Color(0, 0, 0, 1)
@@ -72,29 +72,35 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_n4pxq")
 
 [node name="officer1" type="TextureRect" parent="." unique_id=398373366]
 unique_name_in_owner = true
+modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 1827.0
 offset_top = 289.0
 offset_right = 1962.0
 offset_bottom = 558.0
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_icfjp")
 
 [node name="officer2" type="TextureRect" parent="." unique_id=217502652]
 unique_name_in_owner = true
+modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 1827.0
 offset_top = 289.0
 offset_right = 1962.0
 offset_bottom = 558.0
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_cfx0e")
 
 [node name="officer3" type="TextureRect" parent="." unique_id=16315698]
 unique_name_in_owner = true
+modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 1827.0
 offset_top = 289.0
 offset_right = 1962.0
 offset_bottom = 558.0
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_ovp1s")
 
 [node name="door" type="TextureRect" parent="." unique_id=64780122]
@@ -252,11 +258,10 @@ volume_db = -80.0
 autoplay = true
 parameters/looping = true
 
-[node name="endingnoisesfx" type="AudioStreamPlayer" parent="." unique_id=591395912]
+[node name="endingnoisesfx" type="AudioStreamPlayer" parent="." unique_id=820107056]
 unique_name_in_owner = true
-stream = ExtResource("11_qgxdu")
+stream = ExtResource("14_icfjp")
 volume_db = -80.0
-autoplay = true
 parameters/looping = true
 
 [node name="bargingsfx" type="AudioStreamPlayer" parent="." unique_id=1092876437]

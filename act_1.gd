@@ -23,7 +23,7 @@ func _ready() -> void:
 	await introdoor.finished
 	%officerknockingsfx.play()
 	await get_tree().create_timer(1).timeout
-	dialoguenumber = 15
+	dialoguenumber = 1
 	_type("Officer Savior, Ward County Police Department.", %textleft, 1)
 	_talk(%officertalksfx)
 	
