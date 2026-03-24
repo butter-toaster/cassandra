@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://0oueifo62k1w" path="res://sfx/dooropenandslamsfx.mp3" id="9_baaq4"]
 [ext_resource type="AudioStream" uid="uid://bh4k5y8beq5ne" path="res://sfx/bargingsfx.mp3" id="10_jxrpg"]
 [ext_resource type="AudioStream" uid="uid://6w51b01rwkqt" path="res://sfx/ringing.mp3" id="14_icfjp"]
+[ext_resource type="AudioStream" uid="uid://11ivjnjjuec3" path="res://sfx/officersrunningsfx.mp3" id="16_cfx0e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hi3qe"]
 bg_color = Color(0, 0, 0, 1)
@@ -267,14 +268,20 @@ parameters/looping = true
 [node name="bargingsfx" type="AudioStreamPlayer" parent="." unique_id=1092876437]
 unique_name_in_owner = true
 stream = ExtResource("10_jxrpg")
-volume_db = -5.193
+volume_db = -1.544
 pitch_scale = 0.3
 
 [node name="breakingsfx" type="AudioStreamPlayer" parent="." unique_id=286740780]
 unique_name_in_owner = true
 stream = ExtResource("10_jxrpg")
-volume_db = -5.193
-pitch_scale = 0.3
+volume_db = 5.146
+pitch_scale = 0.44
+
+[node name="officersrunningsfx" type="AudioStreamPlayer" parent="." unique_id=66058416]
+unique_name_in_owner = true
+stream = ExtResource("16_cfx0e")
+volume_db = -17.357
+pitch_scale = 0.91
 
 [node name="guncocking" type="AudioStreamPlayer2D" parent="." unique_id=520926565]
 unique_name_in_owner = true

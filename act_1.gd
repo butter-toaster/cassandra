@@ -50,7 +50,7 @@ func _type(dialogue: String, side: RichTextLabel, times) -> void:
 func _talk(speaker: AudioStreamPlayer2D) -> void:
 	var pitch = randf_range(0.98, 1.02)
 	speaker.pitch_scale = pitch * pitchmult
-	speaker.volume_db = -8 * volscale
+	speaker.volume_db = -3 * volscale
 	speaker.play()
 	%dialoguenoisetimer.wait_time = 0.05 * timemult
 	%dialoguenoisetimer.start()

@@ -25,6 +25,7 @@ func _on_pressed() -> void:
 				await get_tree().create_timer(1.8).timeout
 				canpress = true
 			2:
+				$".."._reset()
 				canpress = false
 				await get_tree().create_timer(2).timeout
 				%textleft.modulate = Color("8f63da")
@@ -38,7 +39,7 @@ func _on_pressed() -> void:
 				await get_tree().create_timer(0.5).timeout
 				%gunshots.play()
 				%textleft.modulate = Color("7547bdff")
-				%textleft.text = "PLEASE... OFFICERS"
+				%textleft.text = "PLEASE..."
 				await get_tree().create_timer(0.7).timeout
 				%gunshots.play()
 				%textleft.modulate = Color("48267aff")
@@ -116,11 +117,12 @@ func _bargingsequence() -> void:
 	%opendoor.show()
 	await get_tree().create_timer(0.2).timeout
 	var policetween = create_tween().set_parallel(true)
+	%officersrunningsfx.play()
 	policetween.tween_property(%officer1, "global_position:x", -300, 1)
 	policetween.tween_property(%officer2, "global_position:x", -300, 1.3)
 	policetween.tween_property(%officer3, "global_position:x", -300, 1.75)
 	var t2 = create_tween()
-	t2.tween_property(%endingnoisesfx,"volume_db", 20, 3)
+	t2.tween_property(%endingnoisesfx,"volume_db", 24, 3)
 	await t2.finished
 	get_tree().change_scene_to_file("res://ending.tscn")
 	
